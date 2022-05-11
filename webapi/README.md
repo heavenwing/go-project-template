@@ -1,6 +1,6 @@
-# API project
+# Web API project
 
-This folder will include standard API project code structure template.
+This folder will include standard Web API project code structure template.
 
 ## project-root
 
