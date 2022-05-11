@@ -2,6 +2,7 @@ package main
 
 import (
 	"heavenwing/go-project-template/webapi/handler"
+	"heavenwing/go-project-template/webapi/manager"
 	"heavenwing/go-project-template/webapi/middleware"
 	"heavenwing/go-project-template/webapi/service"
 	"log"
@@ -23,7 +24,8 @@ func main() {
 	home := handler.NewHomeHandler(authService)
 	http.Handle(handler.RoutePath_Home_Index, logger.Middleware(http.HandlerFunc(home.IndexAction)))
 
-	hello := handler.NewHelloHandler()
+	sayManager := manager.NewSayManager()
+	hello := handler.NewHelloHandler(sayManager)
 	http.Handle(handler.RoutePath_Hello_Index, logger.Middleware(http.HandlerFunc(hello.IndexAction)))
 	http.Handle(handler.RoutePath_Hello_Say, logger.Middleware(http.HandlerFunc(hello.SayAction)))
 

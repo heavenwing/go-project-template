@@ -24,5 +24,5 @@ func (s *HelloHandler) SayAction(w http.ResponseWriter, r *http.Request) {
 			name = v[0]
 		}
 	}
-	fmt.Fprintf(w, "Hello %s!", name)
+	fmt.Fprint(w, s.manager.Say(name))
 }
