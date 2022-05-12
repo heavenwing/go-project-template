@@ -14,13 +14,15 @@ This folder will include standard Web API project code structure template.
 
 - |- const.go // this file contains all global constants definitions
 
-- |- utils.go // this file contains all utility function definitions
+- |- setting.go //[optional] this file contains all configuration public vairables and loader functions, if setting is not complex
+
+- |- utils.go // this file contains all utility functions definitions
 
 |= handler //handler folder contains all webapi hanlder code files
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
 
-- |- const.go // this file contains all constants in the package
+- |- const.go // this file contains all local constants in the package
 
 - |- model.go // this file contains all model type definitions in the handler package
 
@@ -38,9 +40,9 @@ This folder will include standard Web API project code structure template.
 
 |= manager //manager folder contains all webapi biz logic code files that the handler depend on
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
 
-- |- const.go // this file contains all constants in the package
+- |- const.go // this file contains all local constants in the package
 
 - |- interface.go // all interface definitions of managers
 
@@ -48,9 +50,9 @@ This folder will include standard Web API project code structure template.
 
 |= dbaccess //dbaccess folder contains all database access code files that the manager depend on
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
 
-- |- const.go // this file contains all constants in the package
+- |- const.go // this file contains all local constants in the package
 
 - |- interface.go // all interface definitions of dbaccess
 
@@ -58,17 +60,17 @@ This folder will include standard Web API project code structure template.
 
 |= middleware //middleware folder contains all webapi middleware code files
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
 
-- |- const.go // this file contains all constants in the package
+- |- const.go // this file contains all local constants in the package
 
 - |- logger.go // a sample middleware for log all request, with -er/-or postfix
 
 |= service //service folder contains the client code for all the external services that the handler, manager and middleware depend on
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
 
-- |- const.go // this file contains all constants in the package
+- |- const.go // this file contains all local constants in the package
 
 - |- interface.go // all interface definitions of service clients
 
@@ -76,9 +78,13 @@ This folder will include standard Web API project code structure template.
 
 |= setting //setting folder contains all code files related to configuration or setting
 
-- |- common.go // this file contains all common functions and vairables in the package
+- |- common.go // this file contains all common local functions and vairables in the package
+
+- |- config.go // this file contains all public vairables for config
 
 - |- const.go // this file contains all constants in the package
+
+- |- loader.go // this file contains load config public functions
 
 ## model file
 
