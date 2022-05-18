@@ -2,6 +2,5 @@
 
 This repo will provides some recommended Golang project templates, it includes:
 
-- Web API project
-- Worker (background) project
-
+- [Web API](webapi/README.md) project
+- [Worker](worker/README.md) (background) project
