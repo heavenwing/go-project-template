@@ -116,6 +116,12 @@ If there are some model types, you can create a model.go or xxx_model.go (ex: au
 
 - -> global
 
+### dbaccess
+
+- -> setting
+
+- -> global
+
 ### setting
 
 - -> global

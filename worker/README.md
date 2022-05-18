@@ -18,7 +18,7 @@ This folder will include standard Worker project code structure template.
 
 - |- utils.go // this file contains all utility functions definitions
 
-|= worker //handler folder contains all webapi hanlder code files
+|= worker //handler folder contains all background worker code files
 
 - |- common.go // this file contains all common local functions and vairables in the package
 
@@ -32,7 +32,7 @@ This folder will include standard Worker project code structure template.
 
 - |- interface.go // all interface definitions of processors
 
-|= manager //manager folder contains all webapi biz logic code files that the handler depend on
+|= manager //manager folder contains all biz logic code files that the workder or handler depend on
 
 - |- common.go // this file contains all common local functions and vairables in the package
 
@@ -52,7 +52,7 @@ This folder will include standard Worker project code structure template.
 
 - |- user.go // a sample database access for user data
 
-|= service //service folder contains the client code for all the external services that the handler, manager and middleware depend on
+|= service //service folder contains the client code for all the external services that the workder, handler, manager depend on
 
 - |- common.go // this file contains all common local functions and vairables in the package
 
@@ -103,6 +103,12 @@ If there are some model types, you can create a model.go or xxx_model.go (ex: au
 ### manager
 
 - -> dbaccess
+
+- -> setting
+
+- -> global
+
+### dbaccess
 
 - -> setting
 
